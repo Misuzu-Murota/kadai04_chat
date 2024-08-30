@@ -1,0 +1,230 @@
+body{
+    background-image: linear-gradient(155deg, rgba(171, 176, 255, 0.61), rgba(220, 228, 248, 0.61) 0%, rgba(221, 224, 245, 0.61) 0%, rgba(250, 183, 207, 0.61) 3%, rgba(224, 216, 239, 0.61) 41%, rgba(216, 237, 255, 0.61) 65%);
+}
+.ichi {
+    width: 80%;
+    padding: 2%;
+    margin: 0 auto; /* 上下のマージンを0、左右のマージンを自動で設定 */
+}
+.nyuryoku{
+    height: 230px;
+    padding: 1%;
+    background-color: #edefef;
+    background-size: cover; /* 背景画像を要素のサイズに合わせて拡大・縮小 */
+    background-position: center; /* 背景画像を中央に配置 */
+    color: rgb(21, 1, 1); /* テキストの色を白に設定して見やすくする */
+    border: 2px solid #444;
+    border-radius: 10px; /* 角を少し丸める */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* 黒板に影をつける */
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* 各行の間にスペースを追加 */
+}
+.input {
+    display: flex;
+    align-items: center; /* 垂直方向の中央揃え */
+    margin-right: 10px; /* 各入力フィールド間のスペース */
+    flex: 1; /* 各入力フィールドの幅を均等にする */
+}
+.comment {
+    padding: 3px;
+    justify-items: center;
+}
+#text{
+    width: 95%;
+    padding: 1%;
+    margin-top: 5px;
+}
+#tokumei{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    transform: scale(1.5); /* 1.5倍に拡大 */
+}
+label[for="tokumei"] {
+    font-size: 1.2em; /* フォントサイズを1.2倍に */
+}
+#send{
+  margin-top: 5px;
+  margin-left: 2px;
+  background-color: #fff;
+  border: solid 2px #191970;
+  color: #191970;
+  border-radius: 20px;
+  padding: 5px 20px;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 5px 0 #191970;
+  display: inline-block;
+  transition: .3s;
+}
+#send:hover {
+  color: #191970;
+  transform: translateY(3px);
+  box-shadow: 0 0 0 #191970;
+}
+h2{
+    font-size: x-large;
+    margin: 2%;
+    font-variant: normal;
+    font-weight: bold;
+}
+#output{
+    border: 2px solid #323131; /* 2pxの黒い実線の枠線 */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* 影を追加 */
+    padding: 18px; /* 内側に余白を追加 */
+    margin: 10px; /* 外側に余白を追加 */
+    background-color:#edefef;
+    border-radius: 10px; /* 角を少し丸める */
+}
+.tabs {
+    display: flex;
+    flex-wrap: wrap; /* 複数行に折り返し */
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.tablink {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #7e7676;
+    background-color: #c1edff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    width: 100px; /* タブの幅を固定 */
+    text-align: center; /* 中央揃え */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/* タブが選択されたときのデザイン */
+.tablink.active {
+    background-color: #5145f8; /* ホバー時の背景色 */
+    color: white; /* アクティブ時の文字色 */
+    border-bottom: 3px solid #d3d1eb; /* アクティブ時のボーダー色 */
+}
+
+/* ホバー時のデザイン */
+.tablink:hover {
+    background-color: #5145f8; /* ホバー時の背景色 */
+    color: white; /* アクティブ時の文字色 */
+}
+
+.tablink + .tablink {
+    margin-left: 5px; /* タブ間のスペース */
+}
+/* レスポンシブデザイン - 画面幅が600px以下の場合 */
+@media screen and (max-width: 1000px) {
+    .tablink {
+        font-size: 14px; /* フォントサイズを小さく */
+        margin-bottom: 10px; /* 下に余白を追加 */
+        width: 100px; /* タブの幅を固定 */
+    }
+    .tabs {
+        justify-content: space-between; /* スペースを調整 */
+    }
+}
+.message {
+    border: 1px solid #676262; /* グレーの1px実線 */
+    padding: 10px; /* メッセージの内側に余白を追加 */
+    margin-bottom: 5px; /* 各メッセージの間にスペースを追加 */
+    border-radius: 5px; /* 角を丸める */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* 軽い影を追加して浮き上がる効果を追加 */
+    background-color: #f9f9f9; /* メッセージ背景色 */
+}
+.info-group {
+    display: flex;
+    align-items: center; /* 垂直方向の中央揃え */
+    margin-top: 5px; /* 各項目間のスペース */
+    margin-bottom: 5px; /* 各項目間のスペース */
+}
+.remove, .update {
+    margin-left: 10px;
+    cursor: pointer;
+    color: blue;
+}
+.date{
+    flex: 1; /* 名前の要素が残りのスペースを占める */
+}
+.uname01{
+    margin-top: 5px; /* 各項目間のスペース */
+    margin-bottom: 5px; /* 各項目間のスペース */
+}
+.sex01 {
+    border: solid 1px #191970;
+    color: #191970;
+    border-radius: 15px;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 30px; /* 性別の位置を名前の右側に固定 */
+}
+.sex01.female {
+    background-color: #ffcccb; /* 女性はライトピンク */
+}
+.sex01.male {
+    background-color: #add8e6; /* 男性はライトブルー */
+}
+.sex01.other {
+    background-color: #d3d3d3; /* その他はライトグレー */
+}
+/* 役職のクラス */
+.post01 {
+    border: solid 1px #191970;
+    color: #191970;
+    border-radius: 15px;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.post01.executive {
+    background-color: #ffcccb; /* 役員はライトピンク */
+}
+
+.post01.manager {
+    background-color: #add8e6; /* 管理職はライトブルー */
+}
+
+.post01.employee {
+    background-color: #a5f5af; /* 一般社員は黄緑 */
+}
+
+.post01.newcomer {
+    background-color: #fffacd; /* 新入社員はライトイエロー */
+}
+
+/* その他カテゴリのクラス */
+.others01 {
+    border: solid 1px #191970;
+    color: #191970;
+    border-radius: 15px;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.others01.transfer {
+    background-color: #ffcccb; /* 単身赴任中はライトピンク */
+}
+
+.others01.care {
+    background-color: #add8e6; /* 介護中はライトブルー */
+}
+
+.others01.parenting {
+    background-color: #a5f5af; /* 子育て中は黄緑 */
+}
+
+.others01.living_alone {
+    background-color: #fffacd; /* 一人暮らしはライトイエロー */
+}
+.post01,
+.others01 {
+    margin-left: 15px; /* 性別と役職、役職とその他カテゴリの間のスペースを15pxに設定 */
+}

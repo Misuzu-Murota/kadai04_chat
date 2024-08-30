@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/sample.css">
+<title>社内雑談Chat</title>
+</head>
+<body>
+
+<!-- コンテンツ表示画面 -->
+<div class="ichi">
+    <h1>社内雑談Chat</h1>
+    <div class="nyuryoku">
+    <div class="input-group">
+    <div class="input"> 名前：<input type="text" id="uname"> </div>
+    <div class="input">性別：
+        <select name="category" id="sex">
+            <option value="">-</option>
+            <option value="女性">女性</option>
+            <option value="男性">男性</option>
+            <option value="その他">その他</option>    
+        </select>
+    </div>
+    </div>
+    <div class="input-group">
+    <div class="input">役職：
+        <select name="category" id="post">
+            <option value="">-</option>
+            <option value="役員">役員</option>
+            <option value="管理職">管理職</option>
+            <option value="一般社員">一般社員</option>
+            <option value="新入社員">新入社員</option>    
+        </select>
+    </div>
+    <div class="input">その他カテゴリ：
+        <select name="category" id="others">
+            <option value="">-</option>
+            <option value="単身赴任">単身赴任</option>
+            <option value="介護中">介護中</option>
+            <option value="子育て中">子育て中</option>
+            <option value="一人暮らし">一人暮らし</option>
+        </select>
+    </div>
+    </div>
+    <div class="comment"> 
+        <label for="title">コメント：</label>
+        <textarea id="text"></textarea>
+    </div>
+    <div>
+        <input type="checkbox" id="tokumei">匿名で投稿する
+    </div>
+    <div>
+        <button id="send">送信</button>
+    </div>
+    </div>
+    <div>
+    <h2>雑談カテゴリ</h2>
+      <!-- タブメニュー -->
+      <div class="tabs">
+        <button class="tablink" data-filter="all">すべて</button>
+        <button class="tablink" data-filter="男性">男性</button>
+        <button class="tablink" data-filter="女性">女性</button>
+        <button class="tablink" data-filter="その他">その他</button>
+        <button class="tablink" data-filter="役員">役員</button>
+        <button class="tablink" data-filter="管理職">管理職</button>
+        <button class="tablink" data-filter="一般社員">一般社員</button>
+        <button class="tablink" data-filter="新入社員">新入社員</button>
+        <button class="tablink" data-filter="単身赴任">単身赴任</button>
+        <button class="tablink" data-filter="介護中">介護中</button>
+        <button class="tablink" data-filter="子育て中">子育て中</button>
+        <button class="tablink" data-filter="一人暮らし">一人暮らし</button>
+    </div>
+    <div id="output" style="overflow: auto; height: 1000px;"></div>
+
+    </div>
+</div>
+
+<script type="module" src="js\sample.js"></script>
+</body>
+</html>
